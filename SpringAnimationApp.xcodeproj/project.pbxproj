@@ -56,15 +56,47 @@
 		31D042152683901400E18784 /* SpringAnimationApp */ = {
 			isa = PBXGroup;
 			children = (
-				31D042162683901400E18784 /* AppDelegate.swift */,
-				31D042182683901400E18784 /* SceneDelegate.swift */,
-				31D0421A2683901400E18784 /* ViewController.swift */,
-				31D0421C2683901400E18784 /* Main.storyboard */,
-				31D0421F2683901900E18784 /* Assets.xcassets */,
-				31D042212683901900E18784 /* LaunchScreen.storyboard */,
-				31D042242683901900E18784 /* Info.plist */,
+				31D0422C2683906300E18784 /* ViewControllers */,
+				31D0422B2683904600E18784 /* Storyboards */,
+				31D0422A2683902800E18784 /* Resources */,
+				31D0422D2683907300E18784 /* SupportingFiles */,
 			);
 			path = SpringAnimationApp;
+			sourceTree = "<group>";
+		};
+		31D0422A2683902800E18784 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				31D0421F2683901900E18784 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		31D0422B2683904600E18784 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				31D0421C2683901400E18784 /* Main.storyboard */,
+				31D042212683901900E18784 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		31D0422C2683906300E18784 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				31D0421A2683901400E18784 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		31D0422D2683907300E18784 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				31D042162683901400E18784 /* AppDelegate.swift */,
+				31D042182683901400E18784 /* SceneDelegate.swift */,
+				31D042242683901900E18784 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
