@@ -12,6 +12,7 @@ class SpringViewController: UIViewController {
     
     @IBOutlet weak var springView: SpringView!
     @IBOutlet weak var springButton: SpringButton!
+    @IBOutlet weak var textView: UITextView!
     
     private var nextSpingAnimationPreset: SpringAnimationPreset?
     
@@ -42,9 +43,11 @@ class SpringViewController: UIViewController {
         
         springView.animate()
         
+        textView.text = springView.getCode()
+        
         self.nextSpingAnimationPreset = springView.getRandomAnimation()
         
-        springButton.setTitle(nextSpingAnimationPreset.animation, for: .normal)
+        springButton.setTitle(self.nextSpingAnimationPreset?.animation, for: .normal)
     }
     
 }

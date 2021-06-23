@@ -24,4 +24,32 @@ extension SpringView {
             scaleY: CGFloat.random(in: 1.0...1.5)
         )
     }
+    
+    func getCode() -> String {
+        var codeText: String = ""
+        
+        if animation != "" {
+            codeText += "animation = \"\(animation)\"\n"
+        }
+        if curve != "" {
+            codeText += "curve = \"\(curve)\"\n"
+        }
+        codeText += String(format: "force =  %.1f\n", Double(force))
+        codeText += String(format: "duration =  %.1f\n", Double(duration))
+        codeText += String(format: "delay =  %.1f\n", Double(delay))
+        codeText += String(format: "damping =  %.1f\n", Double(damping))
+        codeText += String(format: "velocity =  %.1f\n", Double(velocity))
+        codeText += String(format: "rotate =  %.1f\n", Double(rotate))
+        codeText += String(format: "x =  %.1f\n", Double(x))
+        codeText += String(format: "y =  %.1f\n", Double(y))
+        codeText += String(format: "scaleX =  %.1f\n", Double(scaleX))
+        codeText += String(format: "scaleY =  %.1f\n", Double(scaleY))
+        
+        
+        
+        
+        codeText += "layer.animate()"
+        
+        return codeText
+    }
 }
