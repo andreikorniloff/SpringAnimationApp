@@ -21,7 +21,7 @@ class SpringViewController: UIViewController {
         
         configureUI()
         
-        nextSpingAnimationPreset = springView.getRandomAnimation()
+        nextSpingAnimationPreset = SpringAnimationPreset.getRandomAnimation()
     }
 
     @IBAction func springButtonPressed(_ sender: SpringButton) {
@@ -43,9 +43,9 @@ class SpringViewController: UIViewController {
         
         springView.animate()
         
-        textView.text = springView.getCode()
+        textView.text = nextSpingAnimationPreset.description
         
-        self.nextSpingAnimationPreset = springView.getRandomAnimation()
+        self.nextSpingAnimationPreset = SpringAnimationPreset.getRandomAnimation()
         
         springButton.setTitle(self.nextSpingAnimationPreset?.animation, for: .normal)
     }

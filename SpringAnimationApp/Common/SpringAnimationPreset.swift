@@ -21,71 +21,46 @@ struct SpringAnimationPreset {
     var y: CGFloat
     var scaleX: CGFloat
     var scaleY: CGFloat
-}
+    
+    var description: String {
+        var codeText: String = ""
+        
+        if animation != "" {
+            codeText += "animation = \"\(animation)\"\n"
+        }
+        if curve != "" {
+            codeText += "curve = \"\(curve)\"\n"
+        }
+        codeText += String(format: "force =  %.1f\n", Double(force))
+        codeText += String(format: "duration =  %.1f\n", Double(duration))
+        codeText += String(format: "delay =  %.1f\n", Double(delay))
+        codeText += String(format: "damping =  %.1f\n", Double(damping))
+        codeText += String(format: "velocity =  %.1f\n", Double(velocity))
+        codeText += String(format: "rotate =  %.1f\n", Double(rotate))
+        codeText += String(format: "x =  %.1f\n", Double(x))
+        codeText += String(format: "y =  %.1f\n", Double(y))
+        codeText += String(format: "scaleX =  %.1f\n", Double(scaleX))
+        codeText += String(format: "scaleY =  %.1f\n", Double(scaleY))
 
-extension SpringAnimationPreset {
-    static var animations: [Spring.AnimationPreset]  {
-        [
-            .Shake,
-            .Pop,
-            .Morph,
-            .Squeeze,
-            .Wobble,
-            .Swing,
-            .FlipX,
-            .FlipY,
-            .Fall,
-            .SqueezeLeft,
-            .SqueezeRight,
-            .SqueezeDown,
-            .SqueezeUp,
-            .SlideLeft,
-            .SlideRight,
-            .SlideDown,
-            .SlideUp,
-            .FadeIn,
-            .FadeOut,
-            .FadeInLeft,
-            .FadeInRight,
-            .FadeInDown,
-            .FadeInUp,
-            .ZoomIn,
-            .ZoomOut,
-            .Flash
-        ]
+        codeText += "layer.animate()"
+        
+        return codeText
     }
     
-    static var animationCurves: [Spring.AnimationCurve]  {
-        [
-            .EaseIn,
-            .EaseOut,
-            .EaseInOut,
-            .Linear,
-            .Spring,
-            .EaseInSine,
-            .EaseOutSine,
-            .EaseInOutSine,
-            .EaseInQuad,
-            .EaseOutQuad,
-            .EaseInOutQuad,
-            .EaseInCubic,
-            .EaseOutCubic,
-            .EaseInOutCubic,
-            .EaseInQuart,
-            .EaseOutQuart,
-            .EaseInOutQuart,
-            .EaseInQuint,
-            .EaseOutQuint,
-            .EaseInOutQuint,
-            .EaseInExpo,
-            .EaseOutExpo,
-            .EaseInOutExpo,
-            .EaseInCirc,
-            .EaseOutCirc,
-            .EaseInOutCirc,
-            .EaseInBack,
-            .EaseOutBack,
-            .EaseInOutBack
-        ]
+    static func getRandomAnimation() -> SpringAnimationPreset {
+        SpringAnimationPreset(
+            animation: DataManager.shared.animations.randomElement()?.rawValue ?? "wobble",
+            curve: DataManager.shared.animationCurves.randomElement()?.rawValue ?? "easeIn",
+            force: CGFloat.random(in: 1.0...2.0),
+            duration: 1.0,
+            delay: 0.0,
+            damping: CGFloat.random(in: 0.0...1.0),
+            velocity: CGFloat.random(in: 0.0...1.0),
+            rotate: CGFloat.random(in: 0.0...5.0),
+            x: CGFloat.random(in: -20.0...20.0),
+            y: CGFloat.random(in: -20.0...20.0),
+            scaleX: CGFloat.random(in: 1.0...1.5),
+            scaleY: CGFloat.random(in: 1.0...1.5)
+        )
     }
 }

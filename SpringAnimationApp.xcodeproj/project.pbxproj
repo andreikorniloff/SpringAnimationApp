@@ -14,7 +14,7 @@
 		31D042202683901900E18784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31D0421F2683901900E18784 /* Assets.xcassets */; };
 		31D042232683901900E18784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31D042212683901900E18784 /* LaunchScreen.storyboard */; };
 		31D0423326839EF600E18784 /* SpringAnimationPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0423226839EF600E18784 /* SpringAnimationPreset.swift */; };
-		31D042352683A04E00E18784 /* Extension + SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D042342683A04E00E18784 /* Extension + SpringView.swift */; };
+		31D042372684F5C800E18784 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D042362684F5C800E18784 /* DataManager.swift */; };
 		3781ACF4599C7EB37438949E /* Pods_SpringAnimationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F979A246E8EE7ED9976A9839 /* Pods_SpringAnimationApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		31D042222683901900E18784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31D042242683901900E18784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31D0423226839EF600E18784 /* SpringAnimationPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimationPreset.swift; sourceTree = "<group>"; };
-		31D042342683A04E00E18784 /* Extension + SpringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + SpringView.swift"; sourceTree = "<group>"; };
+		31D042362684F5C800E18784 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		451C65878FE4B1D1201E4540 /* Pods-SpringAnimationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpringAnimationApp.debug.xcconfig"; path = "Target Support Files/Pods-SpringAnimationApp/Pods-SpringAnimationApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DC9D950A63B24DA828F5E30E /* Pods-SpringAnimationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpringAnimationApp.release.xcconfig"; path = "Target Support Files/Pods-SpringAnimationApp/Pods-SpringAnimationApp.release.xcconfig"; sourceTree = "<group>"; };
 		F979A246E8EE7ED9976A9839 /* Pods_SpringAnimationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpringAnimationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +69,6 @@
 			children = (
 				31D0422F26839EB000E18784 /* Common */,
 				31D0422C2683906300E18784 /* ViewControllers */,
-				31D0422E26839D6600E18784 /* Extensions */,
 				31D0422B2683904600E18784 /* Storyboards */,
 				31D0422A2683902800E18784 /* Resources */,
 				31D0422D2683907300E18784 /* SupportingFiles */,
@@ -112,18 +111,11 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		31D0422E26839D6600E18784 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				31D042342683A04E00E18784 /* Extension + SpringView.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		31D0422F26839EB000E18784 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				31D0423226839EF600E18784 /* SpringAnimationPreset.swift */,
+				31D042362684F5C800E18784 /* DataManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -260,8 +252,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				31D0421B2683901400E18784 /* SpringViewController.swift in Sources */,
+				31D042372684F5C800E18784 /* DataManager.swift in Sources */,
 				31D042172683901400E18784 /* AppDelegate.swift in Sources */,
-				31D042352683A04E00E18784 /* Extension + SpringView.swift in Sources */,
 				31D042192683901400E18784 /* SceneDelegate.swift in Sources */,
 				31D0423326839EF600E18784 /* SpringAnimationPreset.swift in Sources */,
 			);
